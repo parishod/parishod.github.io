@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hushomatic &mdash; Take control of your notifications</title>
+    <meta name="description" content="Hushomatic is an Android app that helps you take control of notifications. Log them quietly in the background and review them on your own time.">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/hushomatic-icon.svg">
+    <link href="../css/styles.css" rel="stylesheet">
+    <style>
+        .app-hero {
+            padding: 80px 0 56px;
+            text-align: center;
+        }
+        .app-hero .app-icon {
+            width: 128px;
+            height: 128px;
+            border-radius: 28px;
+            margin: 0 auto 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(91, 141, 239, 0.25);
+        }
+        .app-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin: 0 0 12px;
+            line-height: 1.1;
+        }
+        .app-hero .tagline {
+            color: var(--text-muted);
+            font-size: clamp(1.05rem, 2vw, 1.2rem);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+        .cta-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            background: var(--text);
+            color: #fff;
+            border-radius: 999px;
+            font-weight: 500;
+            font-size: 0.97rem;
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+        .cta-btn:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        .cta-btn.secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .cta-btn.secondary:hover {
+            background: var(--bg-alt);
+            color: var(--text);
+        }
+        .cta-note {
+            margin-top: 16px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .features {
+            background: var(--bg-alt);
+            padding: 72px 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .feature {
+            padding: 24px;
+        }
+        .feature .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(91, 141, 239, 0.12);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .feature h3 {
+            font-size: 1.05rem;
+            margin: 0 0 8px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .feature p {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 0.96rem;
+        }
+        .prose {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .prose h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin: 0 0 16px;
+        }
+        .prose p {
+            color: var(--text-muted);
+            margin: 0 0 16px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a class="brand" href="../index.html">Parishod</a>
+        <nav class="site-nav">
+            <a href="../index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+        </nav>
+    </div>
+</header>
+
+<section class="app-hero">
+    <div class="container">
+        <div class="app-icon">
+            <img src="../assets/images/hushomatic-icon.svg" alt="Hushomatic icon">
+        </div>
+        <h1>Hushomatic</h1>
+        <p class="tagline">Take control of your notifications. Hushomatic quietly logs notifications in the background so you can review them on your own time &mdash; not the moment they arrive.</p>
+        <div class="cta-row">
+            <a class="cta-btn" href="#features">Learn more</a>
+            <a class="cta-btn secondary" href="privacy.html">Privacy policy</a>
+        </div>
+        <p class="cta-note">Available for Android &mdash; Google Play listing coming soon.</p>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="container">
+        <h2 class="section-title" style="text-align:center; margin-bottom: 40px;">What it does</h2>
+        <div class="features-grid">
+
+            <div class="feature">
+                <div class="icon">&#128276;</div>
+                <h3>Notification inbox</h3>
+                <p>Every notification gets quietly captured into an inbox so you can scan through them when you&rsquo;re ready.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">&#128274;</div>
+                <h3>Stays on your device</h3>
+                <p>Notification data stays on your phone. Nothing leaves your device &mdash; no analytics, no servers, no tracking.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">&#9881;</div>
+                <h3>Simple and focused</h3>
+                <p>A clean Material 3 interface built around one job &mdash; helping you manage notifications without distraction.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">&#9728;</div>
+                <h3>Lightweight</h3>
+                <p>Built natively with Kotlin and Jetpack Compose. Quick to launch, easy on your battery, and minimal storage footprint.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="prose">
+            <h2>Why Hushomatic?</h2>
+            <p>Modern phones are loud. Notifications stack up across apps, demand attention the moment they arrive, and disappear before you can decide whether they mattered.</p>
+            <p>Hushomatic shifts the dynamic. Instead of every alert competing for your attention in real time, notifications flow into a calm, searchable inbox on your own device. You stay in control of what you look at and when.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div>&copy; Parishod</div>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="privacy.html">Privacy policy</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
